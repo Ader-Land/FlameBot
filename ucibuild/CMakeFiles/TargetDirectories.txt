@@ -1,0 +1,3 @@
+/home/isa/Documents/Codes/TerminalChess/ucibuild/CMakeFiles/TerminalChess.dir
+/home/isa/Documents/Codes/TerminalChess/ucibuild/CMakeFiles/edit_cache.dir
+/home/isa/Documents/Codes/TerminalChess/ucibuild/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,4 @@
-#include "FlameBot.h"
+#include "FlameBoth.h"
 #include "../BoardHash/BoardHash.h"
 #include "../Time/Time.h"
 #include "../Chess/Chess.h"
@@ -72,25 +72,25 @@ Chess::Move FlameBoth::Bot::getBestMove(Chess::Board board, int depth)
             /**
              * daha iyi zaman uyumu için :
              */
-            if(timer.elapsedTime() > timeLimit)
-            {
-                std::cout << "time is over. procces stoped : " << timer.elapsedTime() << "\n";
-                currentDepthBestMove = miredownBackup;
-                break; 
-            }
+            // if(timer.elapsedTime() > timeLimit)
+            // {
+            //     std::cout << "time is over. procces stoped : " << timer.elapsedTime() << "\n";
+            //     currentDepthBestMove = miredownBackup;
+            //     break; 
+            // }
             
         }
 
 
         globalBestMove = currentDepthBestMove;
         
-        std::cout << "[Depth] " << depthIndex << " [finished] | [State]: " << bestVal << " | [Timer]: " << timer.elapsedTime() << "s" << "\n";
+        // std::cout << "[Depth] " << depthIndex << " [finished] | [State]: " << bestVal << " | [Timer]: " << timer.elapsedTime() << "s" << "\n";
 
-        if(timer.elapsedTime() > timeLimit)
-        {
-            std::cout << "time is over. procces stoped\n";
-            break; 
-        }
+        // if(timer.elapsedTime() > timeLimit)
+        // {
+        //     std::cout << "time is over. procces stoped\n";
+        //     break; 
+        // }
     }
 
     return globalBestMove;

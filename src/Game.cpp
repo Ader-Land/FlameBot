@@ -4,7 +4,7 @@
 #include <iomanip>
 #include "BoardHash/BoardHash.h"
 #include "Chess/Chess.h"
-#include "FlameBot/FlameBot.h"
+#include "FlameBoth/FlameBoth.h"
 #include "Time/Time.h"
 
 #define RESET       "\033[0m"

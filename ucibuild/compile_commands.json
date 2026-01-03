@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/isa/Documents/Codes/TerminalChess/ucibuild",
+  "command": "/usr/bin/c++   -std=gnu++17 -O3 -march=native -funroll-loops -Wall -o CMakeFiles/TerminalChess.dir/src/main.cpp.o -c /home/isa/Documents/Codes/TerminalChess/src/main.cpp",
+  "file": "/home/isa/Documents/Codes/TerminalChess/src/main.cpp",
+  "output": "CMakeFiles/TerminalChess.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/isa/Documents/Codes/TerminalChess/ucibuild",
+  "command": "/usr/bin/c++   -std=gnu++17 -O3 -march=native -funroll-loops -Wall -o CMakeFiles/TerminalChess.dir/src/Time/Time.cpp.o -c /home/isa/Documents/Codes/TerminalChess/src/Time/Time.cpp",
+  "file": "/home/isa/Documents/Codes/TerminalChess/src/Time/Time.cpp",
+  "output": "CMakeFiles/TerminalChess.dir/src/Time/Time.cpp.o"
+},
+{
+  "directory": "/home/isa/Documents/Codes/TerminalChess/ucibuild",
+  "command": "/usr/bin/c++   -std=gnu++17 -O3 -march=native -funroll-loops -Wall -o CMakeFiles/TerminalChess.dir/src/Chess/Chess.cpp.o -c /home/isa/Documents/Codes/TerminalChess/src/Chess/Chess.cpp",
+  "file": "/home/isa/Documents/Codes/TerminalChess/src/Chess/Chess.cpp",
+  "output": "CMakeFiles/TerminalChess.dir/src/Chess/Chess.cpp.o"
+},
+{
+  "directory": "/home/isa/Documents/Codes/TerminalChess/ucibuild",
+  "command": "/usr/bin/c++   -std=gnu++17 -O3 -march=native -funroll-loops -Wall -o CMakeFiles/TerminalChess.dir/src/FlameBoth/FlameBoth.cpp.o -c /home/isa/Documents/Codes/TerminalChess/src/FlameBoth/FlameBoth.cpp",
+  "file": "/home/isa/Documents/Codes/TerminalChess/src/FlameBoth/FlameBoth.cpp",
+  "output": "CMakeFiles/TerminalChess.dir/src/FlameBoth/FlameBoth.cpp.o"
+},
+{
+  "directory": "/home/isa/Documents/Codes/TerminalChess/ucibuild",
+  "command": "/usr/bin/c++   -std=gnu++17 -O3 -march=native -funroll-loops -Wall -o CMakeFiles/TerminalChess.dir/src/BoardHash/BoardHash.cpp.o -c /home/isa/Documents/Codes/TerminalChess/src/BoardHash/BoardHash.cpp",
+  "file": "/home/isa/Documents/Codes/TerminalChess/src/BoardHash/BoardHash.cpp",
+  "output": "CMakeFiles/TerminalChess.dir/src/BoardHash/BoardHash.cpp.o"
+}
+]

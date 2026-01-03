@@ -1,6 +1,6 @@
 #include "ChessApp.h"
 #include "../Chess/Chess.h" 
-#include "../FlameBot/FlameBot.h" 
+#include "../FlameBoth/FlameBoth.h" 
 #include <iostream>
 #include <thread>
 // #include <slint/slint.h>

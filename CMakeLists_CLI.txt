@@ -9,7 +9,7 @@ add_executable(TerminalChess
   src/Game.cpp
   src/Time/Time.cpp
   src/Chess/Chess.cpp
-  src/FlameBot/FlameBot.cpp
+  src/FlameBoth/FlameBoth.cpp
   src/BoardHash/BoardHash.cpp
 )
 
