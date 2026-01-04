@@ -7,6 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(TerminalChess
   src/main.cpp
+  src/OpeningBook/OpeningBook.cpp
   src/Time/Time.cpp
   src/Chess/Chess.cpp
   src/FlameBoth/FlameBoth.cpp

@@ -7,4 +7,9 @@ chess_game
 CMakeFlies/
 clibuild/
 guibuild/
+ucibuild/
+trialbuild/
 FlameBot_v0.9.1/
+kitap.txt
+bjbraams_chessdb_198350_lines.pgn
+venv/
