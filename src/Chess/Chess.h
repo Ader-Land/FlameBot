@@ -21,7 +21,7 @@ namespace Chess
 
         BoardCoordinate(File f = File::A, Rank r = Rank::One) : file(f), rank(r) {}
 
-        BoardCoordinate operator=(BoardCoordinate other)
+        BoardCoordinate& operator=(BoardCoordinate other) // minor bugfix; btw whole namecpace need a bugfix & optimisation
         {
             this->file = other.file;
             this->rank = other.rank;
