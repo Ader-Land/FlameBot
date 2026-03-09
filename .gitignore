@@ -14,14 +14,8 @@ Thumbs.db
 # Old build dirs
 localbuild/
 clibuild/
-guibuild/
 ucibuild/
 trialbuild/
-
-# GUI dependencies & output
-gui/node_modules/
-gui/dist/
-gui/package-lock.json
 
 # Misc
 test.cpp
