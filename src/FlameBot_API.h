@@ -28,9 +28,6 @@ FLAMEBOT_API void FlameBot_Destroy();
 /// Yeni oyun başlat (tahtayı sıfırla, hash tablosunu temizle)
 FLAMEBOT_API void FlameBot_NewGame();
 
-/// Açılış kitabı yükle (bin dosyası)
-FLAMEBOT_API void FlameBot_LoadBook(const char *path);
-
 // ──────── Pozisyon ────────
 
 /// FEN ile pozisyon ayarla
@@ -50,7 +47,6 @@ FLAMEBOT_API char FlameBot_GetTurn();
 /// Belirli karedeki taşın gidebileceği hedef kareleri döner.
 /// square: "e2" gibi kare adı
 /// outBuf: "e3 e4" gibi boşlukla ayrılmış hedef kareler yazılır
-/// Dönen değer: yazılan karakter sayısı
 FLAMEBOT_API int FlameBot_GetLegalMoves(const char *square, char *outBuf,
                                         int bufSize);
 
@@ -63,16 +59,27 @@ FLAMEBOT_API int FlameBot_GetAllLegalMoves(char *outBuf, int bufSize);
 /// En iyi hamleyi bul.
 /// moveTimeMs: düşünme süresi (milisaniye)
 /// outBuf: "e2e4" gibi UCI hamle stringi yazılır
-/// Dönen değer: yazılan karakter sayısı
+/// NOT: Bu fonksiyon thread-safe ve deadlock-free'dir.
+///      Hesaplama board kopyası üzerinde, mutex dışında yapılır.
+///      Unreal'da AsyncTask ile çağırılması önerilir.
 FLAMEBOT_API int FlameBot_GetBestMove(int moveTimeMs, char *outBuf,
                                       int bufSize);
+
+/// Arama devam ediyor mu? 1 = evet, 0 = hayır
+/// Unreal tarafından polling için kullanılabilir.
+FLAMEBOT_API int FlameBot_IsSearching();
 
 // ──────── Oyun Durumu ────────
 
 /// Oyunun güncel durumunu döndürür.
-/// Dönen değer: 0 = Ongoing (Devam ediyor), 1 = Checkmate (Mat), 2 = Stalemate
-/// (Pat)
+/// 0 = Ongoing, 1 = Checkmate (Mat), 2 = Stalemate (Pat)
 FLAMEBOT_API int FlameBot_GetGameState();
+
+// ──────── Açılış Kitabı ────────
+
+/// Açılış kitabını yükle.
+/// path: kitap dosyasının tam yolu (ör. "C:/Game/Content/kitap.txt")
+FLAMEBOT_API void FlameBot_LoadBook(const char *path);
 
 #ifdef __cplusplus
 }
