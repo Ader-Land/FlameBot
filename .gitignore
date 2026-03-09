@@ -1,15 +1,32 @@
+# Build outputs
+build/
 *.o
 *.exe
-build/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Old build dirs
 localbuild/
-test.cpp
-chess_game
-CMakeFlies/
 clibuild/
 guibuild/
 ucibuild/
 trialbuild/
+
+# GUI dependencies & output
+gui/node_modules/
+gui/dist/
+gui/package-lock.json
+
+# Misc
+test.cpp
+chess_game
 FlameBot_v0.9.1/
 kitap.txt
-bjbraams_chessdb_198350_lines.pgn
+*.pgn
 venv/
