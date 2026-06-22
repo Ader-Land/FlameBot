@@ -30,3 +30,8 @@ FlameBot_v0.9.1/
 kitap.txt
 *.pgn
 venv/
+
+# Local notes / personal files
+ARCH_LINUX.md
+*.log
+*.tmp
