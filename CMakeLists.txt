@@ -32,6 +32,11 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
         -finput-charset=UTF-8 
         -fexec-charset=UTF-8
     )
+    target_link_options(FlameBot PRIVATE
+        -static
+        -static-libgcc
+        -static-libstdc++
+    )
 else()
     message(STATUS ">>> Target System: Linux/Unix")
     target_compile_options(FlameBot PRIVATE -O3 -march=native -funroll-loops -Wall)

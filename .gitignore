@@ -31,7 +31,6 @@ kitap.txt
 *.pgn
 venv/
 
-# Local notes / personal files
-ARCH_LINUX.md
+# Local temp files
 *.log
 *.tmp

@@ -6,7 +6,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . FlameBot-Chess --platform=win32 --arch=x64 --overwrite --out=dist --extra-resource=../build/FlameBot.exe --icon=null --no-prune"
+    "package": "electron-packager . FlameBot-Chess --platform=win32 --arch=x64 --overwrite --out=dist --extra-resource=../build/FlameBot.exe --icon=null --no-prune",
+    "package:linux": "electron-packager . FlameBot-Chess --platform=linux --arch=x64 --overwrite --out=dist --executable-name=chess --extra-resource=../build/FlameBot --no-prune"
   },
   "devDependencies": {
     "electron": "^35.0.0",

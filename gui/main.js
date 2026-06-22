@@ -1,19 +1,29 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
+const fs = require('fs');
 
 let engineProcess = null;
 let mainWindow = null;
 
 // ─── Motor Yolu ───
 function getEnginePath() {
-    if (app.isPackaged) {
-        // electron-packager: resources/FlameBot.exe
-        return path.join(process.resourcesPath, 'FlameBot.exe');
-    } else {
-        // Dev modda: gui/../build/FlameBot.exe
-        return path.join(__dirname, '..', 'build', 'FlameBot.exe');
+    const candidates = [
+        path.join(process.resourcesPath, 'FlameBot'),
+        path.join(process.resourcesPath, 'FlameBot.exe'),
+        path.join(process.resourcesPath, 'build', 'FlameBot'),
+        path.join(process.resourcesPath, 'build', 'FlameBot.exe'),
+        path.join(__dirname, '..', 'build', 'FlameBot'),
+        path.join(__dirname, '..', 'build', 'FlameBot.exe')
+    ];
+
+    for (const candidate of candidates) {
+        if (fs.existsSync(candidate)) {
+            return candidate;
+        }
     }
+
+    return candidates[0];
 }
 
 // ─── Motor Başlatma ───
@@ -26,7 +36,7 @@ function startEngine() {
     try {
         engineProcess = spawn(enginePath, [], {
             stdio: ['pipe', 'pipe', 'pipe'],
-            windowsHide: true,
+            windowsHide: process.platform === 'win32',
             env: process.env
         });
 
@@ -152,7 +162,7 @@ function createWindow() {
         }
     });
 
-    mainWindow.loadFile('index.html');
+    mainWindow.loadFile(path.join(__dirname, 'index.html'));
     mainWindow.setMenuBarVisibility(false);
 
     // Sayfa yüklendiğinde motoru otomatik başlat
